@@ -35,6 +35,30 @@ function alertar(event){
    // if(resultado == 0){
 // alert("este número é par!");
    // }
+
+   const url = `https://viacep.com.br/ws/${CEP.value}/json`;
+
+   fetch(url)
+   .then(function(resposta){
+      return resposta.json();
+
+   })
+   .then(
+      function(dadosDoEndereco){
+         Logradouro.value = dadosDoEndereco.Logradouro;
+         Bairro.value = dadosDoEndereco.Bairro;
+         Cidade.value = dadosDoEndereco.localidade;
+         Estado.value = dadosDoEndereco.uf;
+         Complemento.value = dadosDoEndereco.Complemento;
+       
+      }
+   )
+ .catch(function(e){
+   alert(e.message());
+
+ });  
+
+
    saida.innerText = "Nome: " + nome.value +
    "\n Email: " + email.value +
     "\n Telefone:" + Telefone.value + 
