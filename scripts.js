@@ -39,7 +39,13 @@ function alertar(event){
    "\n Email: " + email.value +
     "\n Telefone:" + Telefone.value + 
     "\n CEP: " + CEP.value +
-     "\n Logradouro:" + Logradouro.value;
+     "\n Logradouro: " + Logradouro.value +
+     "\n Numero: " + Numero.value +
+     "\n Complemento: " + Complemento.value +
+     "\n Bairro: " + Bairro.value +
+     "\n Cidade: " + Cidade.value +
+     "\n Estado: " + Estado.value;
+     
 
 
    
